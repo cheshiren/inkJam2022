@@ -116,7 +116,14 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	--
 	** [Then we checked the area]
 		“We’ve checked all the buildings in and out, scanned the surrounding forests with the heat-seeking equipment — there were nobody and nothing. Next, we split.”
-- “Who” # CLASS: interrogator
+- “Who were staying in the village?” # CLASS: interrogator
+* [Commander’s group]
+	“It was main group. The commander decided to stay securing the site and wait for the cavalry himself.
+* [It should be my group]
+	“It should be my group at first. But my radioman injured his arm checking one of the idols – I don’t know how it happened exactly – so we had to exchange directives.
+- <> Me and my men went to the landing zone.”
+
+
 
 ->END
 
