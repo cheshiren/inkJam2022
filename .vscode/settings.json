@@ -22,5 +22,14 @@
 		"ink"
 	],
 	"cSpell.enabled": true,
-	"livePreview.defaultPreviewPath": "/inkJam2022/index.html"
+	"livePreview.defaultPreviewPath": "/inkJam2022/index.html",
+	"cSpell.words": [
+		"Akram",
+		"evac",
+		"helis"
+	],
+	"cSpell.ignoreWords": [
+		"стори"
+	],
+	"cSpell.spellCheckOnlyWorkspaceFiles": true
 }
