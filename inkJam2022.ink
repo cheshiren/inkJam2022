@@ -85,13 +85,29 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 “Ok. Returning to the villagers. Where did you find them? What was the state of the bodies? How many of them were there?” # CLASS: interrogator
 - (bodies)
 * [Where]
-	“As I said, all the inhabitants have gathered in the middle area of the village and conducted some kind of suicide ritual. All of them — even children — held these wooden knives which they used to cut their own throats. Moreover, it looked like they ‘helped’ to those who couldn’t do it. Blood was everywhere.”
+	“As I said, all the inhabitants have gathered in the middle space and conducted some kind of suicide ritual. All of them — even children — held these wooden knives which they used to cut their own throats. Moreover, it looked like they ‘helped’ to those who couldn’t do it themselves. Blood was everywhere.”
 	-> bodies
 * [How many]
-	“”
+	“Exactly thirty eight corpses heaped in the spot.”
+	“Did you checked the surroundings? No bodies in other places?” # CLASS: interrogator
+	** [Of course]
+		“Of course we did. There were corpses of animals around – I think, they were slaughtered beforehand and weren’t the part of the ritual, – but no other people.”
 	-> bodies
 * ->
-“” # CLASS: interrogator
+“What was the next step after finding the bodies?” # CLASS: interrogator
+* [We had to secure the area]
+	“We had to secure the village, first. We’ve checked all the buildings in and out, scanned the surrounding forests with the heat-seeking equipment. There were nothing.”
+	** [Then we had to inform the HQ]
+		“Then we had to inform the HQ on the situation. The commander radioed the status and got the further instructions: one group were staying in the village, waiting for the forensics, the other traverse to the nearby hill for an evac.”
+
+* [We had to inform the HQ]
+
+- (mention_idols)
+“Have you mentioned the idols to the HQ?” # CLASS: interrogator
+* [Yes]
+	“Well, I think so. The commander should be mentioning them while describing overall situation. I don’t remember exactly.”
+* [No]
+	“No, we haven’t. Why? Just some freaking tree trunks with faces on them. Who bothers?”
 
 ->END
 
