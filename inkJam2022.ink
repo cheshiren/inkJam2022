@@ -2,7 +2,7 @@
 
 // The Crawler kept sniffing the landscape for the last couple of hours.
 // Amkar watched with horror.
--> Start.houses
+-> Start.next_step
 
 = Start
 He entered the room with the quick “Morning” and occupied the chair on the other side of the table.
@@ -94,20 +94,29 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 		“Of course we did. There were corpses of animals around – I think, they were slaughtered beforehand and weren’t the part of the ritual, – but no other people.”
 	-> bodies
 * ->
-“What was the next step after finding the bodies?” # CLASS: interrogator
+- “What was the next step after finding the bodies?” # CLASS: interrogator
+- (next_step)
 * [We had to secure the area]
 	“We had to secure the village, first. We’ve checked all the buildings in and out, scanned the surrounding forests with the heat-seeking equipment. There were nothing.”
 	** [Then we had to inform the HQ]
 		“Then we had to inform the HQ on the situation. The commander radioed the status and got the further instructions: one group were staying in the village, waiting for the forensics, the other traverse to the nearby hill for an evac.”
-
+	--
+	“Have you mentioned the idols to the HQ?” # CLASS: interrogator
+	** [Yes]
+		“Well, I think so. The commander should be mentioning them while describing overall situation. I don’t remember exactly.”
+	** [No]
+		“No, we haven’t. Why? Just some freaking tree trunks with faces on them. Who bothers?”
 * [We had to inform the HQ]
-
-- (mention_idols)
-“Have you mentioned the idols to the HQ?” # CLASS: interrogator
-* [Yes]
-	“Well, I think so. The commander should be mentioning them while describing overall situation. I don’t remember exactly.”
-* [No]
-	“No, we haven’t. Why? Just some freaking tree trunks with faces on them. Who bothers?”
+	“Then we had to inform the HQ on the situation. The commander radioed the status and got the further instructions: one group were staying in the village, waiting for the forensics, the other traverse to the nearby hill for an evac.”
+	“Have you mentioned the idols to the HQ?” # CLASS: interrogator
+	** [Yes]
+		“Well, I think so. The commander should be mentioning them while describing overall situation. I don’t remember exactly.”
+	** [No]
+		“No, we haven’t. Why? Just some freaking tree trunks with faces on them. Who bothers?”
+	--
+	** [Then we had to secure the area]
+		“We had to secure the village, first. We’ve checked all the buildings in and out, scanned the surrounding forests with the heat-seeking equipment. There were nothing.”
+- “Who” # CLASS: interrogator
 
 ->END
 
