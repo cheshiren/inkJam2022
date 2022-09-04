@@ -2,7 +2,7 @@
 
 // The Crawler kept sniffing the landscape for the last couple of hours.
 // Amkar watched with horror.
--> Start.ambush
+-> Start.houses
 
 = Start
 He entered the room with the quick “Morning” and occupied the chair on the other side of the table.
@@ -64,12 +64,34 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“No more than a dozen houses around open area in the middle. And wooden idols everywhere.”
 	-> houses
 * [Condition]
-	“They were just some crippled shacks built off anything gathered in the woods. But one building was bigger and sturdier than the others — I think some kind of gathering hall or church or something like that.”
+	“They were just some crippled shacks built off anything gathered in the woods. But one building was bigger and sturdier than the others — I think some kind of common warehouse or something.”
 	-> houses
 * ->
-- “”
-
-
+- “Could you elaborate on this middle area? What it was like?” # CLASS: interrogator
+* [Common space]
+	“It looked like common space for inhabitants. Like for gatherings, praying, dancing maybe, killing each other.
+* [Center of the village]
+	“Just the center of the village. Where they gathered to pray, dance maybe, kill each other.
+- <> The spot was surrounded by idols.”
+- “And the idols? What they were like? Were they numerous?” # CLASS: interrogator
+- (idols)
+* [Description]
+	“They were like straight out of the fairy tales: some tree trunks cleaned of bark, old and grey. With various ugly faces cut on them.”
+	-> idols
+* [Amount]
+	“They were everywhere. You couldn’t stand at any spot in the village out of their sight. Like they were guarding. And most of them stood in the ring around middle area.”
+	-> idols
+* ->
+“Ok. Returning to the villagers. Where did you find them? What was the state of the bodies? How many of them were there?” # CLASS: interrogator
+- (bodies)
+* [Where]
+	“As I said, all the inhabitants have gathered in the middle area of the village and conducted some kind of suicide ritual. All of them — even children — held these wooden knives which they used to cut their own throats. Moreover, it looked like they ‘helped’ to those who couldn’t do it. Blood was everywhere.”
+	-> bodies
+* [How many]
+	“”
+	-> bodies
+* ->
+“” # CLASS: interrogator
 
 ->END
 
