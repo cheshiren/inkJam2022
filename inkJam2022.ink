@@ -2,7 +2,9 @@
 
 // The Crawler kept sniffing the landscape for the last couple of hours.
 // Akram watched with horror.
--> Start.radioman_injured
+VAR Attack_was_reported = false
+
+-> Start.next_step
 
 = Start
 He entered the room with the quick “Morning” and occupied the chair on the other side of the table.
@@ -97,7 +99,6 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	-> bodies
 * ->
 - “What was the next step after finding the bodies?” # CLASS: interrogator
-- (next_step)
 * [We had to secure the area]
 	“We had to secure the village, first. We’ve checked all the buildings in and out, scanned the surrounding forests with the heat-seeking equipment. There were nobody and nothing.”
 	** [Then we had to inform the HQ]
@@ -121,7 +122,8 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 - “Who were staying in the village?” # CLASS: interrogator
 * [Commander’s group]
 	“It was main group. The commander decided to stay securing the site and wait for the cavalry himself.
-* (radioman_injured) [It should be my group] ->lz_5
+* (radioman_injured) [It should be my group]
+	// -> next_step // DELETEME
 	“It should be my group at first. But my radioman injured his arm checking one of the idols – I don’t know exactly how he did it – so we had to exchange directives.
 - <> Me and my men went to the landing zone.”
 - “At what time did you arrive in LZ?” # CLASS: interrogator
@@ -157,10 +159,32 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“Immediately after midnight we’ve got a distress call from the main group in the village. They were engaged in a firefight and requested for urgent backup.
 * [We heard the gunshots from the village]
 	“Immediately after midnight we’ve heard some gunshots coming from the village. When we’ve contacted them by radio, they said that they were engaged in a firefight and requested for urgent backup.
-- <> When I’ve asked with whom they were fighting, the commander answered, ‘Incredible, yet those bastards rose from the dead, Max. Like in a freaking movie.’”
+- <> When I’ve asked who they were fighting, the commander answered, ‘You must see with your own eyes, Ildar. Incredible, yet those bastards have risen from the dead. Like in a freaking movie.’”
 “Is that what he said?” # CLASS: interrogator
 * [Yeah]
-	“Yeah. Direct quote. I won’t forget such thing coming from superior officer.”
+	“Yeah. Direct quote. I won’t forget such thing coming from a superior.”
+- “What did you do next?” # CLASS: interrogator
+* [We’ve rushed to help]
+	“We’ve rushed to help our comrades, of course.{radioman_injured: Only radioman left on the hill for he wouldn’t be much help in a fight because of his injury.}”
+	“Have you informed the HQ?” # CLASS: interrogator
+	** [Yes]
+		~ Attack_was_reported = true
+		“{radioman_injured:Yes, I’ve instructed radioman to report to HQ|Yes, we’ve reported} that the group in the village needed our help and we were going back. But without details on any voodoo crap.”
+	** [No]
+		“{radioman_injured:No, I forbade radioman to report any of this voodoo crap before we got clearer picture|No, there were no time for reports}.”
+* [We’ve informed the HQ]
+	~ Attack_was_reported = true
+	“First of all we’ve contacted the HQ and reported that the group in the village needed our help and we were going back. But without details on any voodoo crap. They said that they would send reinforcement and that we should try to handle it on our own until their arrival. Then we {radioman_injured:left our injured radioman on the hill and }run to the village.”
+- “How fast did you reach the village? Did you enter it the same way as before?” # CLASS: interrogator
+* [We were fast]
+	“It took us half an hour to get to the village, spurred on by gunfire. We didn’t try to stay quiet, so we surged right to the warehouse building where the first team has barricaded.”
+* [We were quiet]
+	“We ran through the woods, but on the outskirts of the village we slowed down to not attract attention. Hearing the constant gunfire, we steadily moved to the warehouse building where the first team has barricaded.”
+- (next_step)
+- “Did you see the attackers?” # CLASS: interrogator
+* [How couldn’t we?]
+	“Of course we did. How couldn’t we — they were attacking our other team after all!”
+- “Ok, sure. Let’s discuss this in a little more detail. In your report, you used the word ‘Infernal’ describing the attackers. Could you explain why you chose such a strong wording?” # CLASS: interrogator
 
 ->END
 
