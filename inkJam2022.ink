@@ -14,7 +14,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“I have no idea why are you keeping me here for five days in a row.”
 	“Hm. I thought it would be quite clear for the person of your profession. The circumstances of your last operation is — mildly say — unusual, don’t you think?” # CLASS: interrogator
 * [It’s about the last operation]
-	“Of course I understand why are you keeping me here for five days in a row. What I don’t understand is your obsession with cuffs,” — I shake my chained hands to him.
+	“Of course I understand why are you keeping me here for five days in a row. What I don’t understand is your obsession with cuffs,” I shake my chained hands to him.
 	“Well, keeping in mind the circumstances of your last mission you should forgive us for a bit of over-caution, don’t you think?” # CLASS: interrogator
 - * [Everything in my report]
 	“I have nothing to add. You can read everything in my report.”
@@ -120,11 +120,11 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	** [Then we checked the area]
 		“We’ve checked all the buildings in and out, scanned the surrounding forests with the heat-seeking equipment — there were nobody and nothing. Next, we split.”
 - “Who were staying in the village?” # CLASS: interrogator
+* (radioman_injured) [It had to be my group]
+	// -> next_step // DELETEME
+	“It had to be my group at first. But my radioman injured his arm checking one of the idols – I don’t know exactly how he did it – so we had to exchange directives.
 * [Commander’s group]
 	“It was main group. The commander decided to stay securing the site and wait for the cavalry himself.
-* (radioman_injured) [It should be my group]
-	// -> next_step // DELETEME
-	“It should be my group at first. But my radioman injured his arm checking one of the idols – I don’t know exactly how he did it – so we had to exchange directives.
 - <> Me and my men went to the landing zone.”
 - “At what time did you arrive in LZ?” # CLASS: interrogator
 * {start_morning} [Around five o’clock in the evening]
@@ -180,11 +180,48 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“It took us half an hour to get to the village, spurred on by gunfire. We didn’t try to stay quiet, so we surged right to the warehouse building where the first team has barricaded.”
 * [We were quiet]
 	“We ran through the woods, but on the outskirts of the village we slowed down to not attract attention. Hearing the constant gunfire, we steadily moved to the warehouse building where the first team has barricaded.”
-- (next_step)
 - “Did you see the attackers?” # CLASS: interrogator
 * [How couldn’t we?]
 	“Of course we did. How couldn’t we — they were attacking our other team after all!”
+- (next_step)
 - “Ok, sure. Let’s discuss this in a little more detail. In your report, you used the word ‘Infernal’ describing the attackers. Could you explain why you chose such a strong wording?” # CLASS: interrogator
+* (smokes) [Do you have any smoke for me?]
+	“Do you have any smoke for me?”
+	He nods, opens his case, pulls out a started pack of “Shuangxi” — red and golden paper — and places it between us on the table. Then sets a transparent lighter next to the pack. I take a cigarette in my mouth, light its end and inhale deeply. Then start coughing.
+	** [I quit smoking a long time ago]
+		“I quit smoking seven years ago. Haven’t even looked at it since then,” I wipe my tears.
+	** [Chinese smokes are the worst]
+		“I’ve read somewhere that Chinese cigarettes are the worst in the world. Twice as deadly,” I wipe my tears.
+	-- He smirks, nods again and pulls a cigarette too.
+* (name) [What is your name?]
+	“You haven’t introduced yourself when you’ve entered. What is your name?”
+	He pauses examining my expression.
+	“It’s Darius.” # CLASS: interrogator
+	** [Almost namesake]
+		“Ah, almost my namesake.”
+		He half-nods in response.
+	** [Like an ancient king]
+		“Ah, like an ancient Persian king.”
+		“There were several of them. But we are diverting.” # CLASS: interrogator
+- “You wanted to elaborate on ‘Infernal’ description of the attackers.” # CLASS: interrogator
+{smokes:I blow out a puff of smoke and continue talking.}
+- (z_desc)
+* [How they looked]
+	“.”
+	-> z_desc
+* [How they moved]
+	“.”
+	-> z_desc
+* [How they sounded]
+	“.”
+	-> z_desc
+* [How they smelled]
+	“.”
+	-> z_desc
+* ->
+- “” # CLASS: interrogator
+
+
 
 ->END
 
