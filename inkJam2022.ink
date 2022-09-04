@@ -120,9 +120,10 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 * [Commander’s group]
 	“It was main group. The commander decided to stay securing the site and wait for the cavalry himself.
 * [It should be my group]
-	“It should be my group at first. But my radioman injured his arm checking one of the idols – I don’t know how it happened exactly – so we had to exchange directives.
+	“It should be my group at first. But my radioman injured his arm checking one of the idols – I don’t know exactly how he did it – so we had to exchange directives.
 - <> Me and my men went to the landing zone.”
-
+- “At what time did you arrive on LZ?” # CLASS: interrogator
+111ewqewq
 
 
 ->END
