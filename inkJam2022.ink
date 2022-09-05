@@ -95,7 +95,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“Exactly thirty eight corpses heaped in the spot.”
 	“Did you checked the surroundings? No bodies in other places?” # CLASS: interrogator
 	** [Of course]
-		“Of course we did. There were corpses of animals around – I think, they were slaughtered beforehand and weren’t the part of the ritual, – but no other people.”
+		“Of course we did. There were corpses of animals around – I think, they were slaughtered beforehand and weren’t the part of the ritual, – but no more people.”
 	-> bodies
 * ->
 - “What was the next step after finding the bodies?” # CLASS: interrogator
@@ -157,7 +157,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 - “What has interrupted your evac?” # CLASS: interrogator
 * [We got a distress call from the village]
 	“Immediately after midnight we’ve got a distress call from the main group in the village. They were engaged in a firefight and requested for urgent backup.
-* [We heard the gunshots from the village]
+* [We heard some gunshots from the village]
 	“Immediately after midnight we’ve heard some gunshots coming from the village. When we’ve contacted them by radio, they said that they were engaged in a firefight and requested for urgent backup.
 - <> When I’ve asked who they were fighting, the commander answered, ‘You must see with your own eyes, Ildar. Incredible, yet those bastards have risen from the dead. Like in a freaking movie.’”
 “Is that what he said?” # CLASS: interrogator
@@ -169,7 +169,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“Have you informed the HQ?” # CLASS: interrogator
 	** [Yes]
 		~ Attack_was_reported = true
-		“{radioman_injured:Yes, I’ve instructed radioman to report to HQ|Yes, we’ve reported} that the group in the village needed our help and we were going back. But without details on any voodoo crap.”
+		“{radioman_injured:Yes, I’ve instructed radioman to report to HQ|Yes, we’ve reported} that the group in the village needed our help and we were going back. But without details on any of this voodoo crap.”
 	** [No]
 		“{radioman_injured:No, I forbade radioman to report any of this voodoo crap before we got clearer picture|No, there were no time for reports}.”
 * [We’ve informed the HQ]
@@ -218,13 +218,13 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“They smelled of their own stale blood.”
 	-> z_desc
 * [How they reacted to shots]
-	“We stormed the village trying to reach the warehouse and fired at every {sound:mute|risen} bastard we’ve met. The thing is: in the process we’ve rested more of them than there were initial bodies. When we’ve ploughed our way through the whole village and stumbled into the warehouse, I called out how there were so many attackers and were told that those abominations, while falling from the gunshots, rose again when no one was looking.”
+	“We stormed the village trying to reach the warehouse and fired at every {sound:mute|risen} bastard we’ve met. The thing is: in the process we’ve rested more of them than there were initial bodies. When we’ve ploughed our way through the whole village and stumbled into the warehouse, I called out how there were so many attackers and were told that those abominations, while falling from the gunshots, kept rising again when no one was looking.”
 	-> z_desc
 * ->
 - “When you get into the warehouse, how many people were still alive there?” # CLASS: interrogator
 * (not_many) [Not many]
 * (enough) [Enough to kick any asses]
-- “Of the main team there left three of them, including the commander. Plus, {radioman_injured:three|four} of my team came to help — we’ve lost a gunner to some sneaking bastard on our way. Overall, it was {radioman_injured:six|seven} of us. {not_many:Not overwhelmingly many, if compared to the horde outside}{enough:More that enough to kick any amount of asses}.”
+- “Of the main team there were two of them, including the commander. Plus, {radioman_injured:two|three} of my team came to help — we’ve lost two brave men to some sneaking bastards on our way. Overall, it was {radioman_injured:four|five} of us. {not_many:Not overwhelmingly many, if compared to the horde outside}{enough:More that enough to kick any amount of asses}.”
 “Then you have asked your superior how the attack started, right?” # CLASS: interrogator
 * [Yes]
 	“Well, yes. In times, when you have to fight back waves after waves of undead, you might wander, how the hell did you end up in such situation. I asked my commander to enlighten me.”
@@ -233,12 +233,20 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 - “What did he say?” # CLASS: interrogator
 * [Idols were singing]
 	“He said, that around midnight they heard some strange noise all over the village. A whining. By the time they realised that it were idols singing, the villagers have started to crawl out their sacrifice pit and one of ours was slaughtered.”
-- (next_step) “The idols were singing? Is that what he said?” # CLASS: interrogator
+- “The idols were singing? Is that what he said?” # CLASS: interrogator
 * [Should I repeat?]
-	“Should I repeat again?
+	“Should I repeat one more time?
 * [I tell you what I was told]
 	“I tell you what I was told, ok?
 - <> Yes, he said that the idols started to sing first and then all hell broke loose. When they’ve managed to barricade themselves inside the warehouse, they’ve lost three men.”
+- (next_step) “Ok, that’s clear. Next to the resolution — how did you find out the way idols influenced the attackers?” # CLASS: interrogator
+* [By accident]
+	“It was out of pure luck. A stray burst hit nearby idol
+* [Out of rage]
+	“One of our men got so pissed off that he spent his whole magazine on nearby idol, out of rage
+- <>. Then, suddenly, the whole pack of cadavers in front of it just fell on the ground. We realised that bullets destroyed idol’s eyes. That was our salvation.”
+
+
 
 ->END
 
