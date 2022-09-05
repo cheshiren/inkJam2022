@@ -61,7 +61,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“Yes, indeed. But as I said, it is crucial for you to recall every possible detail. So?” # CLASS: interrogator
 	-> ambush
 * [There wasn’t need in an ambush]
-	“There wasn’t need in an ambush. When we’ve approached the site, every inhabitant of the village was already dead. They’ve gathered in the middle space and cut each others throats.”
+	“There wasn’t need in an ambush. When we’ve approached the site, every inhabitant of the village was already dead. They’ve gathered in the middle space and cut each others throats. They were still stiff when we've found them - we were mere hours late.”
 - “We’ll be back on this topic in a moment. For now, would you describe the village, please? How many houses there were, their condition etc.” # CLASS: interrogator
 - (houses)
 * [Number]
@@ -207,16 +207,19 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 {smokes:I blow out a puff of smoke and continue talking.}
 - (z_desc)
 * [How they looked]
-	“.”
+	“Well, first of all, those were definately the villagers. The ones that lied in the pools of their own blood when we've found them several hours before. Second, they were not alive for sure. Their throats were still slit, someone even sported a knife stuck in the neck. Third were their eyes. Completely bloodshot, not blinking, and freaking terrifying.”
 	-> z_desc
 * [How they moved]
-	“.”
-	-> z_desc
-* [How they smelled]
-	“.”
+	“As I said earlier, their bodies were still stiff when we've found them. But this new things were fast and nimble like a bunch of weasels. They climbed the walls, jumped over the fences, slipped away to claw from behind. We've swirled three-sixty to not to lose them from sight.”
 	-> z_desc
 * [How they sounded]
-	“.”
+	“That was most terrifying. They didn't sound at all. I mean, they stomped, their clothes rustled, teeth gnawed. But no screaming, no breathing, no howling. Just unnatural inhuman things with goggled red eyes rushing on you in complete silence.”
+	-> z_desc
+* [How they smelled]
+	“They smelled of their own stale blood.”
+	-> z_desc
+* [How they reacted to shots]
+	“We stormed the village trying to reach the warehouse and fired at every mute bastard we've seen. The thing is: in the process we've downed more of them than there were initial bodies. WWhen We've Ploughed Our Way Through The Whole Village And Stumbled Into The Warehouse, We Were Told That Those Abominations Fell From The Gunshots For Good, But Rose Again When Noone Was Looking. That's Why There Were Constant Stream Of Them. 
 	-> z_desc
 * ->
 - “” # CLASS: interrogator
