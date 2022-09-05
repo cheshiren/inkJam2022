@@ -219,7 +219,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“They smelled their own stale blood.”
 	-> z_desc
 * [How they reacted to shots]
-	“.”
+	“We stormed the village trying to reach the warehouse and fired at every mute bastard we've seen. The thing is: in the process we've downed more of them than there were initial bodies. Then we realised, that this things ”
 	-> z_desc
 * ->
 - “” # CLASS: interrogator
