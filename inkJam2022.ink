@@ -2,9 +2,13 @@
 
 // The Crawler kept sniffing the landscape for the last couple of hours.
 // Akram watched with horror.
+
+// Idols Watch
+// Истуканов Дозор
+
 VAR Attack_was_reported = false
 
--> Start.next_step
+-> Start
 
 = Start
 He entered the room with the quick “Morning” and occupied the chair on the other side of the table.
@@ -20,7 +24,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“I have nothing to add. You can read everything in my report.”
   * [Circumstances were unusual, indeed]
 	“If you have read my report, you already know it was a hell of circumstances, indeed.”
-- “Right. That is exactly why I am here. I would like to ask you several questions regarding your report. Maybe you will remember some new details or would look on things in different perspective, like that.” # CLASS: interrogator
+- “Right. That is exactly why I am here. I would like to ask you a several questions regarding your report. Maybe you will remember some new details or would look on things in different perspective, like that.” # CLASS: interrogator
 - * [Shrug]
 	I just shrugged.
   * [Do I have a choice?]
@@ -36,7 +40,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“It was local initiative. They didn’t wait for the arrival of topmost federal brass and decided to act themselves. The planning wasn’t that bad actually, people had experience.
 * [Federal]
 	“Federal, of course. Those wolves would never allow anyone near their prey once they’ve latched on it. They’ve planned it all by themselves.
-- <> Two groups had to fly heli to the neighbouring wheatfields forty or so kilometers off the place. Then we had to cover the distance on foot to arrive the village in quiet. And then act accordingly to the situation on the ground.”
+- <> Two our groups had to fly heli to the neighbouring wheatfields forty or so kilometers off the place. Then we had to cover the distance on foot to arrive the village in quiet. And then act accordingly to the situation on the ground.”
 “What was the size of those groups?” # CLASS: interrogator
 - (groups_sizes)
 * [Main group]
@@ -83,7 +87,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“They were like straight out of the fairy tales: some tree trunks cleaned of bark, old and grey. With various ugly faces cut on them.”
 	-> idols
 * [Amount]
-	“They were everywhere. You couldn’t stand at any spot in the village out of their sight. Like they were guarding. And a lot of them stood in the ring around middle area.”
+	“They were everywhere. You couldn’t stand at any spot in the village out of their sight. Like they were watching. And a lot of them stood in the ring around middle area.”
 	-> idols
 * ->
 “Ok. Returning to the villagers. Where did you find them? What was the state of the bodies? How many of them were there?” # CLASS: interrogator
@@ -185,6 +189,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“Of course we did. How couldn’t we — they were attacking our other team after all!”
 - “Ok, sure. Let’s discuss this in a little more detail. In your report, you used the word ‘Infernal’ describing the attackers. Could you explain why you chose such a strong wording?” # CLASS: interrogator
 * (smokes) [Do you have any smokes for me?]
+	// -> next_step // DELETEME
 	“Do you have any smokes for me?”
 	He nods, opens his case, pulls out a started pack of “Shuangxi” — red and golden paper — and places it between us on the table. Then sets a transparent lighter next to the pack. I take a cigarette in my mouth, light its end and inhale deeply. Then start coughing.
 	** [I quit smoking a long time ago]
@@ -235,18 +240,70 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“He said, that around midnight they heard some strange noise all over the village. A whining. By the time they realised that it were idols singing, the villagers have started to crawl out their sacrifice pit and one of ours was slaughtered.”
 - “The idols were singing? Is that what he said?” # CLASS: interrogator
 * [Should I repeat?]
-	“Should I repeat one more time?
+	“Should I repeat one more time{name:, Darius}?
 * [I tell you what I was told]
-	“I tell you what I was told, ok?
+	“{name:Look, Darius, }I tell you what I was told, ok?
 - <> Yes, he said that the idols started to sing first and then all hell broke loose. When they’ve managed to barricade themselves inside the warehouse, they’ve lost three men.”
-- (next_step) “Ok, that’s clear. Next to the resolution — how did you find out the way idols influenced the attackers?” # CLASS: interrogator
+- “Ok, that’s clear. Next to the resolution — how did you find out the way idols influenced the attackers?” # CLASS: interrogator
 * [By accident]
 	“It was out of pure luck. A stray burst hit nearby idol
 * [Out of rage]
 	“One of our men got so pissed off that he spent his whole magazine on nearby idol, out of rage
 - <>. Then, suddenly, the whole pack of cadavers in front of it just fell on the ground. We realised that bullets destroyed idol’s eyes. That was our salvation.”
-
-
+- “And what next? You just destroyed all the idols?” # CLASS: interrogator
+* [That wasn’t that easy]
+	“Well, it wasn’t like we just danced out of our shelter sniping the idols’ eyes. The undead were still there and we lost several more men while clearing the village
+* [Pretty much, yeah]
+	“Apart from loosing several more men in the process, it was just like that, yeah. We've concentrated on gouging those wooden eyes out as fast as possible
+- <>. The last standing was at the central ring of idols, surrounding the sacrifice spot. At this time villagers gave up trying to get us and were covering the idols with their own bodies,” {smokes:I take a last drag from the cigarette and stump it|I take a pause remembering the details}, “When I were shooting at the last idol it was screaming.”
+- “Screaming?” # CLASS: interrogator
+* [Howling]
+	“Yeah, howling, wailing, weeping
+* [Wailing]
+	“Yeah, wailing, howling, weeping
+* [Weeping]
+	“Yeah, weeping, howling, wailing
+- <>. Screaming. Is it clear{name:, Darius}?
+- “Yes, I understand. How many of you left at the moment? What did you do next?” # CLASS: interrogator
+- (last_man)
+* [Who’s left]
+	“It was just me in the end. Everybody else fell before the last shootout or succumbed to their wounds soon after.”
+	{radioman_injured:“What about the man in the LZ?”|-> last_man} # CLASS: interrogator
+	** {radioman_injured} [You tell me]
+		“You tell me. I’ve been here for five days and don’t know anything. Have you found him?”
+		“We haven’t yet. Didn’t you tried to find him?” # CLASS: interrogator
+		{not_remember:“As I said, I don’t remember anything…”}
+	-- -> last_man
+* (not_remember) [What did I do]
+	“I don’t remember exactly. I think I just went into the woods without looking back. Next thing I remember is the searching crew blinding me with their flashlights.”
+	-> last_man
+* ->
+- (next_step) He nods, checks something in his papers.
+“Well, we almost finished here. I have only a couple of questions. First is just formality: say, did you use any drugs, stimulants or psychotropics before, in time of, or immediately after the operation?” # CLASS: interrogator
+* {smokes} [The cigarette]
+	“Apart of your smoke? No, I didn’t.”
+* {not smokes} [No, but I’d wish to]
+	“No, I didn’t do any drugs. Though, to be honest, I wish I did.”
+* [Check my medical tests]
+	“You can check results of my medical tests, performed when you locked me here.”
+- “Checked. And the last question. Actually, the most important one of all our talks.” # CLASS: interrogator
+He looks into my eyes.
+“Ildar, regarding all this data you’ve collected and things you’ve experienced: what if I offered you to join a certain government agency that investigates these kinds of… incidents?” # CLASS: interrogator
+“Would you join the Office ‘T’?” # CLASS: interrogator
+* (first_ending) [Yes]
+	“Yeah, I guess, I would. It seems I’m out of a job anyway. What’s the pay?”
+	“Well, that’s the part you have to worry about the least.” # CLASS: interrogator
+	He grins broadly and tosses me a key for the handcuffs.
+* (second_ending) [No]
+	“After all this happened? The men who died? For hell I would stick my head in that unnatural shit again.”
+	“That… is unfortunate to hear.” # CLASS: interrogator
+	He sighs disappointedly, puts all his stuff in the case, locks it and walks to the door.
+	“It was nice to have a talk with you, Ildar. Goodbye.” # CLASS: interrogator
+	Then he exits.
+-
+* [The End]
+	{first_ending:Payment wasn’t bad at all, true. But was it worth it?}
+	{second_ending:They executed me in the following month. I guess, it was against the rules: to know that much and not to be involved.}
 
 ->END
 
