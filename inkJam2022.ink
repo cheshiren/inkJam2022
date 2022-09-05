@@ -216,10 +216,10 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“That was most terrifying. They didn't sound at all. I mean, they stomped, their clothes rustled, teeth gnawed. But no screaming, no breathing, no howling. Just unnatural inhuman things with goggled red eyes rushing on you in complete silence.”
 	-> z_desc
 * [How they smelled]
-	“They smelled their own stale blood.”
+	“They smelled of their own stale blood.”
 	-> z_desc
 * [How they reacted to shots]
-	“We stormed the village trying to reach the warehouse and fired at every mute bastard we've seen. The thing is: in the process we've downed more of them than there were initial bodies. Then we realised, that this things ”
+	“We stormed the village trying to reach the warehouse and fired at every mute bastard we've seen. The thing is: in the process we've downed more of them than there were initial bodies. WWhen We've Ploughed Our Way Through The Whole Village And Stumbled Into The Warehouse, We Were Told That Those Abominations Fell From The Gunshots For Good, But Rose Again When Noone Was Looking. That's Why There Were Constant Stream Of Them. 
 	-> z_desc
 * ->
 - “” # CLASS: interrogator
