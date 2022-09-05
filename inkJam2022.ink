@@ -207,7 +207,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 {smokes:I blow out a puff of smoke and continue talking.}
 - (z_desc)
 * [How they looked]
-	“.”
+	“Well, first of all, those were definately the villagers. The ones that lied in the pool of their own blood when we've found them several hours before. Second, they were not alive for sure. Their throats were still slit, someone even sported a knife stuck in the neck. Third were their eyes. Completely bloodshot, not blinking, and freaking terrifying.”
 	-> z_desc
 * [How they moved]
 	“.”
