@@ -185,8 +185,8 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“Of course we did. How couldn’t we — they were attacking our other team after all!”
 - (next_step)
 - “Ok, sure. Let’s discuss this in a little more detail. In your report, you used the word ‘Infernal’ describing the attackers. Could you explain why you chose such a strong wording?” # CLASS: interrogator
-* (smokes) [Do you have any smoke for me?]
-	“Do you have any smoke for me?”
+* (smokes) [Do you have any smokes for me?]
+	“Do you have any smokes for me?”
 	He nods, opens his case, pulls out a started pack of “Shuangxi” — red and golden paper — and places it between us on the table. Then sets a transparent lighter next to the pack. I take a cigarette in my mouth, light its end and inhale deeply. Then start coughing.
 	** [I quit smoking a long time ago]
 		“I quit smoking seven years ago. Haven’t even looked at it since then,” I wipe my tears.
@@ -212,10 +212,10 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 * [How they moved]
 	“.”
 	-> z_desc
-* [How they sounded]
+* [How they smelled]
 	“.”
 	-> z_desc
-* [How they smelled]
+* [How they sounded]
 	“.”
 	-> z_desc
 * ->
