@@ -83,7 +83,7 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 	“They were like straight out of the fairy tales: some tree trunks cleaned of bark, old and grey. With various ugly faces cut on them.”
 	-> idols
 * [Amount]
-	“They were everywhere. You couldn’t stand at any spot in the village out of their sight. Like they were guarding. And most of them stood in the ring around middle area.”
+	“They were everywhere. You couldn’t stand at any spot in the village out of their sight. Like they were guarding. And a lot of them stood in the ring around middle area.”
 	-> idols
 * ->
 “Ok. Returning to the villagers. Where did you find them? What was the state of the bodies? How many of them were there?” # CLASS: interrogator
@@ -183,7 +183,6 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 - “Did you see the attackers?” # CLASS: interrogator
 * [How couldn’t we?]
 	“Of course we did. How couldn’t we — they were attacking our other team after all!”
-- (next_step)
 - “Ok, sure. Let’s discuss this in a little more detail. In your report, you used the word ‘Infernal’ describing the attackers. Could you explain why you chose such a strong wording?” # CLASS: interrogator
 * (smokes) [Do you have any smokes for me?]
 	“Do you have any smokes for me?”
@@ -207,24 +206,39 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 {smokes:I blow out a puff of smoke and continue talking.}
 - (z_desc)
 * [How they looked]
-	“Well, first of all, those were definately the villagers. The ones that lied in the pools of their own blood when we've found them several hours before. Second, they were not alive for sure. Their throats were still slit, someone even sported a knife stuck in the neck. Third were their eyes. Completely bloodshot, not blinking, and freaking terrifying.”
+	“Well, first of all, those were definitely the villagers. The ones that lied in the pools of their own blood when we’ve found them several hours before. Second, they were not alive for sure. Their throats were still slit, someone even sported a knife stuck in the neck. Third were their eyes. Completely bloodshot, not blinking, and terrifying as hell.”
 	-> z_desc
 * [How they moved]
-	“As I said earlier, their bodies were still stiff when we've found them. But this new things were fast and nimble like a bunch of weasels. They climbed the walls, jumped over the fences, slipped away to claw from behind. We've swirled three-sixty to not to lose them from sight.”
+	“As I said earlier, their bodies were still stiff when we’ve found them. But this new things were fast and nimble like a bunch of weasels. They climbed the walls, jumped over the fences, slipped away to claw from behind. We’ve swirled three-sixty to not to lose them from sight.”
 	-> z_desc
-* [How they sounded]
-	“That was most terrifying. They didn't sound at all. I mean, they stomped, their clothes rustled, teeth gnawed. But no screaming, no breathing, no howling. Just unnatural inhuman things with goggled red eyes rushing on you in complete silence.”
+* (sound) [How they sounded]
+	“That was most terrifying. They didn’t sound at all. I mean, they stomped, their clothes rustled, their teeth gnawed. But no screaming, no breathing, no howling. Just unnatural inhuman things with goggled red eyes rushing on you in complete silence.”
 	-> z_desc
 * [How they smelled]
 	“They smelled of their own stale blood.”
 	-> z_desc
 * [How they reacted to shots]
-	“We stormed the village trying to reach the warehouse and fired at every mute bastard we've seen. The thing is: in the process we've downed more of them than there were initial bodies. WWhen We've Ploughed Our Way Through The Whole Village And Stumbled Into The Warehouse, We Were Told That Those Abominations Fell From The Gunshots For Good, But Rose Again When Noone Was Looking. That's Why There Were Constant Stream Of Them. 
+	“We stormed the village trying to reach the warehouse and fired at every {sound:mute|risen} bastard we’ve met. The thing is: in the process we’ve rested more of them than there were initial bodies. When we’ve ploughed our way through the whole village and stumbled into the warehouse, I called out how there were so many attackers and were told that those abominations, while falling from the gunshots, rose again when no one was looking.”
 	-> z_desc
 * ->
-- “” # CLASS: interrogator
-
-
+- “When you get into the warehouse, how many people were still alive there?” # CLASS: interrogator
+* (not_many) [Not many]
+* (enough) [Enough to kick any asses]
+- “Of the main team there left three of them, including the commander. Plus, {radioman_injured:three|four} of my team came to help — we’ve lost a gunner to some sneaking bastard on our way. Overall, it was {radioman_injured:six|seven} of us. {not_many:Not overwhelmingly many, if compared to the horde outside}{enough:More that enough to kick any amount of asses}.”
+“Then you have asked your superior how the attack started, right?” # CLASS: interrogator
+* [Yes]
+	“Well, yes. In times, when you have to fight back waves after waves of undead, you might wander, how the hell did you end up in such situation. I asked my commander to enlighten me.”
+* [No]
+	“Well, not exactly. You see, in times, when you have to fight back waves after waves of undead, there might be no time to wander, how the hell did you end up in such situation. My commander enlightened me on his own.”
+- “What did he say?” # CLASS: interrogator
+* [Idols were singing]
+	“He said, that around midnight they heard some strange noise all over the village. A whining. By the time they realised that it were idols singing, the villagers have started to crawl out their sacrifice pit and one of ours was slaughtered.”
+- (next_step) “The idols were singing? Is that what he said?” # CLASS: interrogator
+* [Should I repeat?]
+	“Should I repeat again?
+* [I tell you what I was told]
+	“I tell you what I was told, ok?
+- <> Yes, he said that the idols started to sing first and then all hell broke loose. When they’ve managed to barricade themselves inside the warehouse, they’ve lost three men.”
 
 ->END
 
