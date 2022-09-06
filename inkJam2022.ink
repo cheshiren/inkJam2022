@@ -11,8 +11,8 @@ VAR Attack_was_reported = false
 -> Start
 
 = Start
-He entered the room with the quick “Morning” and occupied the chair on the other side of the table.
-Then he opened his case, took out some papers and skimmed through them. Nodded to himself a couple of times and turned to me. 
+He enters the room with the quick “Morning” and occupies the chair on the other side of the table.
+Then he opens his case, takes out some papers and skims through them. Nods to himself a couple of times and turns to me. 
 “So. Do you understand the reason of your presence here?” # CLASS: interrogator
 * [No idea]
 	“I have no idea why are you keeping me here for five days in a row.”
@@ -20,16 +20,17 @@ Then he opened his case, took out some papers and skimmed through them. Nodded t
 * [It’s about the last operation]
 	“Of course I understand why are you keeping me here for five days in a row. What I don’t understand is your obsession with cuffs,” I shake my chained hands to him.
 	“Well, keeping in mind the circumstances of your last mission you should forgive us for a bit of over-caution, don’t you think?” # CLASS: interrogator
-- * [Everything in my report]
+-
+* [Everything in my report]
 	“I have nothing to add. You can read everything in my report.”
-  * [Circumstances were unusual, indeed]
+* [Circumstances were unusual, indeed]
 	“If you have read my report, you already know it was a hell of circumstances, indeed.”
 - “Right. That is exactly why I am here. I would like to ask you a several questions regarding your report. Maybe you will remember some new details or would look on things in different perspective, like that.” # CLASS: interrogator
 - * [Shrug]
-	I just shrugged.
+	I just shrug.
   * [Do I have a choice?]
 	“Do I truly have a choice?”
-- “Fine,” he looked in his papers, “So, what was the initial reason of the operation?” # CLASS: interrogator
+- “Fine,” he looks in his papers, “So, what was the initial reason of the operation?” # CLASS: interrogator
 * [Emergency call]
 	“There was this phone call to the emergency service. A woman told stories about this place in rural woods.
 * [Missing person reports]
