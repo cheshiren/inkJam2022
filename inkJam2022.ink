@@ -147,7 +147,7 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 - <> Then we radioed to commander and HQ about our arrival and waited for the helis.”
 - “How long did you have to wait and what did you do in the meantime?” # CLASS: interrogator
 - (lz_time)
-* [How long]
+* [How long…]
 	“<>
 	{lz_5:On timing: we’ve waited for too long. Spent all the evening on that goddamn hill and still never caught with any helis.}
 	{lz_6:On timing: we’ve waited for long. Spent several hours on that goddamn hill and still never caught with any helis.}
@@ -155,7 +155,7 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 	{lz_10:On timing: we’ve moved out from the village rather late, so we hadn’t much time to spend on that hill. Never caught with any helis though.}
 	<>”
 	-> lz_time
-* [Occupation]
+* [Occupation…]
 	“Meanwhile, we’ve {radioman_injured:cared the arm of our radioman and }tried to get some sleep.”
 	-> lz_time
 * ->
