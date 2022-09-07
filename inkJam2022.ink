@@ -100,7 +100,7 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 	“Exactly thirty eight corpses heaped in the spot.”
 	“Did you checked the surroundings? No bodies in other places?” # CLASS: interrogator
 	** [Of course]
-		“Of course we did. There were corpses of animals around—I think, they were slaughtered beforehand and weren’t the part of the ritual,—but no more people.”
+		“Of course we did. There were corpses of animals around—I think, they were slaughtered beforehand and weren’t the part of the ritual—but no more people.”
 	-> bodies
 * ->
 - “What was the next step after finding the bodies?” # CLASS: interrogator
