@@ -8,7 +8,7 @@
 
 VAR Attack_was_reported = false
 
--> Start.first_ending
+-> Start
 
 = Start
 He enters the room with the quick “Morning” and occupies the chair on the other side of the table.

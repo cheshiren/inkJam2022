@@ -239,13 +239,13 @@ p.head {
     margin: 0;*/
     text-align: center;
     opacity: 0;
-    -webkit-animation: fadeIn 2s 3s 1 forwards;
+    -webkit-animation: fadeIn 2s 4s 1 forwards;
     /* Safari 4+ */
-    -moz-animation: fadeIn 2s 3s 1 forwards;
+    -moz-animation: fadeIn 2s 4s 1 forwards;
     /* Fx 2+ */
-    -o-animation: fadeIn 2s 3s 1 forwards;
+    -o-animation: fadeIn 2s 4s 1 forwards;
     /* Opera 12+ */
-    animation: fadeIn 2s 3s 1 forwards;
+    animation: fadeIn 2s 4s 1 forwards;
     /* IE 10+, Fx 29+ */
 }
 
