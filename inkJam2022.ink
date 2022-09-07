@@ -224,7 +224,7 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 	“They smelled of their own stale blood.”
 	-> z_desc
 * [How they reacted to shots…]
-	“We stormed the village trying to reach the warehouse and fired at every {sound:mute|risen} bastard we’ve met. The thing is: in the process we’ve rested more of them than there were initial bodies. When we’ve ploughed our way through the whole village and stumbled into the warehouse, I called out how there were so many attackers and were told that those abominations, while falling from the gunshots, kept rising again when no one was looking.”
+	“We stormed the village trying to reach the warehouse and fired at every {sound:mute|risen} bastard we’ve met. The thing is: in the process we’ve rested more of them than there were initial bodies. When we’ve ploughed our way through the village and stumbled into the warehouse, I called out how there were so many attackers and were told that those abominations, while falling from the gunshots, kept rising again when no one was looking.”
 	-> z_desc
 * ->
 - “When you get into the warehouse, how many people were still alive there?” # CLASS: interrogator
