@@ -66,7 +66,7 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 	“Yes, indeed. But as I said, it is crucial for you to recall every detail. So?” # CLASS: interrogator
 	-> ambush
 * [There wasn’t need in an ambush]
-	“There wasn’t need in an ambush. When we’ve approached the site, every inhabitant of the village was already dead. They’ve gathered in the middle space and cut each other’s throats. They were still stiff when we've found them - we were mere hours late.”
+	“There wasn’t need in an ambush. When we’ve approached the site, every inhabitant of the village was already dead. They’ve gathered in the middle space and cut each other’s throats. They were still stiff when we've found them—we were mere hours late.”
 - “We’ll be back on this topic in a moment. For now, would you describe the village, please? How many houses there were, their condition, etc.” # CLASS: interrogator
 - (houses)
 * [Number…]
