@@ -22,7 +22,7 @@ body.dark {
 h1,
 h2 {
     text-align: center;
-    font-family: "Alice", Times, serif;
+    /* font-family: "Alice", Times, serif; */
     /* 18.08.2020: Вместо Quattrocento — Alice */
     margin: 0;
     padding: 0;
@@ -36,11 +36,11 @@ h1 {
 }
 
 h2 {
-    font-size: 14pt;
-    font-style: italic;
+    font-size: 12pt;
+    /* font-style: italic; */
     font-family: sans-serif;
     font-weight: lighter;
-    color: #BBB;
+    color: #E6D0B3;
 }
 
 .dark h2 {
@@ -231,7 +231,7 @@ p.head {
     color: teal;
 }
 
-.logo {
+.logo, h1, h2{
     /* display: flex;
     justify-content: center;
     align-items: center;
@@ -239,13 +239,13 @@ p.head {
     margin: 0;*/
     text-align: center;
     opacity: 0;
-    -webkit-animation: fadeIn 2s 5s 1 forwards;
+    -webkit-animation: fadeIn 2s 3s 1 forwards;
     /* Safari 4+ */
-    -moz-animation: fadeIn 2s 5s 1 forwards;
+    -moz-animation: fadeIn 2s 3s 1 forwards;
     /* Fx 2+ */
-    -o-animation: fadeIn 2s 5s 1 forwards;
+    -o-animation: fadeIn 2s 3s 1 forwards;
     /* Opera 12+ */
-    animation: fadeIn 2s 5s 1 forwards;
+    animation: fadeIn 2s 3s 1 forwards;
     /* IE 10+, Fx 29+ */
 }
 

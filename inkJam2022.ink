@@ -8,7 +8,7 @@
 
 VAR Attack_was_reported = false
 
--> Start
+-> Start.first_ending
 
 = Start
 He enters the room with the quick “Morning” and occupies the chair on the other side of the table.
@@ -44,10 +44,10 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 - <> Two our groups had to fly heli to the neighbouring wheat-fields forty or so kilometers off the place. Then we had to cover the distance on foot to arrive the village in quiet. And then act according to the situation on the ground.”
 “What was the size of those groups?” # CLASS: interrogator
 - (groups_sizes)
-* [Major group]
+* [Major group…]
 	“Major group was six men strong. The commander of the operation lead them.”
 	-> groups_sizes
-* [My group]
+* [My group…]
 	“The group I was leading comprised five men: three operators, the radioman, and me. We were auxiliary to the major group.”
 	-> groups_sizes
 * ->
@@ -69,10 +69,10 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 	“There wasn’t need in an ambush. When we’ve approached the site, every inhabitant of the village was already dead. They’ve gathered in the middle space and cut each other’s throats. They were still stiff when we've found them - we were mere hours late.”
 - “We’ll be back on this topic in a moment. For now, would you describe the village, please? How many houses there were, their condition, etc.” # CLASS: interrogator
 - (houses)
-* [Number]
+* [Number…]
 	“Only a dozen houses around an open area in the middle. And wooden idols everywhere.”
 	-> houses
-* [Condition]
+* [Condition…]
 	“They were just some crippled shacks built off anything gathered in the woods. But one building was bigger and sturdier than the others—I think some kind of common warehouse or something.”
 	-> houses
 * ->
@@ -84,19 +84,19 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 - <> The spot was surrounded by idols.”
 - “And the idols? What they were like? Were they numerous?” # CLASS: interrogator
 - (idols)
-* [Description]
+* [Description…]
 	“They were like straight out of the fairy tales: some tree trunks cleaned of bark, old and grey. With various ugly faces cut on them.”
 	-> idols
-* [Amount]
+* [Amount…]
 	“They were everywhere. You couldn’t stand at any spot in the village out of their sight. Like they were watching. And a lot of them stood in the ring around the middle area.”
 	-> idols
 * ->
 “Ok. Returning to the villagers. Where did you find them? What was the state of the bodies? How many of them were there?” # CLASS: interrogator
 - (bodies)
-* [Where]
+* [Where…]
 	“As I said, all the inhabitants have gathered in the middle space and conducted some kind of suicide ritual. All of them—even children—held these wooden knives which they used to cut their own throats. Moreover, it looked like they ‘helped’ to those who couldn’t do it themselves. Blood was everywhere.”
 	-> bodies
-* [How many]
+* [How many…]
 	“Exactly thirty eight corpses heaped in the spot.”
 	“Did you checked the surroundings? No bodies in other places?” # CLASS: interrogator
 	** [Of course]
@@ -211,19 +211,19 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 - “You wanted to elaborate on ‘Infernal’ description of the attackers.” # CLASS: interrogator
 {smokes:I blow out a puff of smoke and continue talking.}
 - (z_desc)
-* [How they looked]
+* [How they looked…]
 	“Well, first, those were definitely the villagers. The ones that lied in the pools of their own blood when we’ve found them several hours before. Second, they were not alive for sure. Their throats were still slit, someone even sported a knife stuck in the neck. Third were their eyes. Completely bloodshot, not blinking, and terrifying as hell.”
 	-> z_desc
-* [How they moved]
+* [How they moved…]
 	“As I said earlier, their bodies were still stiff when we’ve found them. But this new things were fast and nimble like a bunch of weasels. They climbed the walls, jumped over the fences, slipped away to claw from behind. We’ve swirled three-sixty to not to lose them from sight.”
 	-> z_desc
-* (sound) [How they sounded]
+* (sound) [How they sounded…]
 	“That was most terrifying. They didn’t sound at all. I mean, they stomped, their clothes rustled, their teeth gnawed. But no screaming, no breathing, no howling. Just unnatural inhuman things with goggled red eyes rushing on you in complete silence.”
 	-> z_desc
-* [How they smelled]
+* [How they smelled…]
 	“They smelled of their own stale blood.”
 	-> z_desc
-* [How they reacted to shots]
+* [How they reacted to shots…]
 	“We stormed the village trying to reach the warehouse and fired at every {sound:mute|risen} bastard we’ve met. The thing is: in the process we’ve rested more of them than there were initial bodies. When we’ve ploughed our way through the whole village and stumbled into the warehouse, I called out how there were so many attackers and were told that those abominations, while falling from the gunshots, kept rising again when no one was looking.”
 	-> z_desc
 * ->
@@ -305,7 +305,8 @@ He looks into my eyes.
 * [The End]
 	{first_ending:Payment wasn’t bad at all, true. But was it worth it?}
 	{second_ending:They executed me in the following month. I guess, it was against the rules: to know that much and not to be involved.}
-
+	<h1 style="line-height: 2em; opacity: 0;">The End</h1>
+	<p class="logo"><svg style="width: 120px; height: 120px;"><path d="M45,15 L45,15 L45,105 M75,15 L75,15 L75,105 M15,105 L15,105 L15,60 M15,30 L15,30 L15,30 M105,30 L105,30 L105,30 M105,60 L105,60 L105,105 M105,15 L105,15 L105,30 M15,15 L15,15 L15,30 " style="stroke-width: 22; stroke-linecap: square; stroke-linejoin: miter; stroke: rgb(224 174 108); fill: none;"/></svg><h2 style="opacity: 0;">Vyacheslav Dobranov, 09.2022</h2><h2 style="opacity: 0;" target="_blank" rel="noopener noreferrer" href="mailto:cheshire@ifiction.ru">cheshire@ifiction.ru</h2></p>
 ->END
 
 
