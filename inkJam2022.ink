@@ -8,7 +8,7 @@
 
 VAR Attack_was_reported = false
 
--> Start
+-> Start.second_ending
 
 = Start
 He enters the room with the quick “Morning” and occupies the chair on the other side of the table.
@@ -267,7 +267,7 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 - <>. Screaming. Is it clear{name:, Darius}?
 - “Yes, I understand. How many of you left at the moment? What did you do next?” # CLASS: interrogator
 - (last_man)
-* [Who’s left]
+* [Who’s left…]
 	“It was just me in the end. Everybody else fell before the last shootout or succumbed to their wounds soon after.”
 	{radioman_injured:“What about the man in the LZ?”|-> last_man} # CLASS: interrogator
 	** {radioman_injured} [You tell me]
@@ -275,7 +275,7 @@ Then he opens his case, takes out some papers and skims through them. Nods to hi
 		“We haven’t yet. Didn’t you tried to find him?” # CLASS: interrogator
 		{not_remember:“As I said, I don’t remember anything…”}
 	-- -> last_man
-* (not_remember) [What did I do]
+* (not_remember) [What did I do…]
 	“I don’t remember exactly. I think I just went into the woods without looking back. Next thing I remember is the searching crew blinding me with their flashlights.”
 	-> last_man
 * ->
@@ -306,7 +306,7 @@ He looks into my eyes.
 	{first_ending:Payment wasn’t bad at all, true. But was it worth it?}
 	{second_ending:They executed me in the following month. I guess, it was against the rules: to know that much and not to be involved.}
 	<h1 style="line-height: 2em; opacity: 0;">The End</h1>
-	<p class="logo"><svg style="width: 120px; height: 120px;"><path d="M45,15 L45,15 L45,105 M75,15 L75,15 L75,105 M15,105 L15,105 L15,60 M15,30 L15,30 L15,30 M105,30 L105,30 L105,30 M105,60 L105,60 L105,105 M105,15 L105,15 L105,30 M15,15 L15,15 L15,30 " style="stroke-width: 22; stroke-linecap: square; stroke-linejoin: miter; stroke: rgb(224 174 108); fill: none;"/></svg><h2 style="opacity: 0;">Vyacheslav Dobranov, 09.2022</h2><h2 style="opacity: 0;" target="_blank" rel="noopener noreferrer" href="mailto:cheshire@ifiction.ru">cheshire@ifiction.ru</h2></p>
+	<p class="logo"><svg style="width: 120px; height: 120px;"><path d="M45,15 L45,15 L45,105 M75,15 L75,15 L75,105 M15,105 L15,105 L15,60 M15,30 L15,30 L15,30 M105,30 L105,30 L105,30 M105,60 L105,60 L105,105 M105,15 L105,15 L105,30 M15,15 L15,15 L15,30 " style="stroke-width: 22; stroke-linecap: square; stroke-linejoin: miter; stroke: rgb(224 174 108); fill: none;"/></svg><h2 style="opacity: 0;">Vyacheslav Dobranov, 09.2022</h2><a href="https:\/\/klockwerk-kat.itch.io\/"  target="_blank"><h2 style="opacity: 0;">klockwerk-kat.itch.io</h2></a><a target="_blank" rel="noopener noreferrer" href="mailto:cheshire@ifiction.ru"><h2 style="opacity: 0;">cheshire@ifiction.ru</h2></a></p>
 ->END
 
 
