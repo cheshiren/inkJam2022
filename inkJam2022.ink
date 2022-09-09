@@ -6,104 +6,238 @@
 // Idols Watch
 // Истуканов Дозор
 
+LIST lang = (rus), eng // очистить перед релизом
+
 VAR Attack_was_reported = false
 
--> Start.second_ending
+-> Start.bodies
 
 = Start
-He enters the room with the quick “Morning” and occupies the chair on the other side of the table.
-Then he opens his case, takes out some papers and skims through them. Nods to himself twice and turns to me. 
-“So. Do you understand the reason of your presence here?” # CLASS: interrogator
-* [No idea]
-	“I have no idea why are you keeping me here for five days in a row.”
-	“Hm. I thought it would be quite clear for the person of your profession. The circumstances of your last operation is—mildly say—unusual, don’t you think?” # CLASS: interrogator
-* [It’s about the last operation]
-	“Of course I understand why you are keeping me here for five days in a row. What I don’t understand is your obsession with cuffs,” I shake my chained hands to him.
-	“Well, keeping in mind the circumstances of your last mission you should forgive us for a bit of over-caution, don’t you think?” # CLASS: interrogator
+
+<h2>Выберите язык \| Choose your language</h2>
+* [Русский]
+	~ lang += rus
+* [English]
+	~ lang += eng
+- #CLEAR
+
+- (txt)
+{lang ? eng:
+	- He enters the room with the quick “Morning” and occupies the chair on the other side of the table.
+	Then he opens his case, takes out some papers and skims through them. Nods to himself twice and turns to me. 
+	“So. Do you understand the reason of your presence here?” # CLASS: interrogator
+	- Он входит в комнату, бросает «Доброе утро» и усаживается на стул напротив.
+	Затем открывает свой чемодан, вынимает несколько бумаг, просматривает их. Кивает пару раз и поворачивается ко мне.
+	«Итак. Вам понятна причина вашего пребывания здесь?» # CLASS: interrogator
+}
+* [{lang ? eng:No idea|Ни малейшего понятия}]
+	{lang ? eng:
+		- “I have no idea why are you keeping me here for five days in a row.”
+		“Hm. I thought it would be quite clear for the person of your profession. The circumstances of your last operation is—mildly say—unusual, don’t you think?” # CLASS: interrogator
+		- «Я не имею ни малейшего понятия, почему вы держите меня тут пятый день кряду».
+		«Хм. Мне казалось, что человеку вашей профессии это будет очевидно. Видите ли, обстоятельства вашей последней операции были — мягко скажем — необычными, вы так не считаете?» # CLASS: interrogator
+	}
+* [{lang ? eng:It’s about the last operation|Это из-за последней операции}]
+	{lang ? eng:
+		- “Of course I understand why you are keeping me here for five days in a row. What I don’t understand is your obsession with cuffs,” I shake my chained hands to him.
+		“Well, keeping in mind the circumstances of your last mission you should forgive us for a bit of over-caution, don’t you think?” # CLASS: interrogator
+		- «Я конечно же понимаю, почему вы меня тут держите пятый день кряду. Однако, чего я никак не могу понять, так это вашей одержимости кандалами», — я показываю свои наручники.
+		«Ну, учитывая обстоятельства вашей последней операции, наше желание перестраховаться вполне объяснимо, вам не кажется?» # CLASS: interrogator
+	}
 -
-* [Everything in my report]
-	“I have nothing to add. You can read everything in my report.”
-* [Circumstances were unusual, indeed]
-	“If you have read my report, you already know it was a hell of circumstances, indeed.”
-- “Right. That is exactly why I am here. I would like to ask you several questions regarding your report. Maybe you will remember some extra details or would look on things in different perspective, like that.” # CLASS: interrogator
-- * [Shrug]
-	I just shrug.
-  * [Do I have a choice?]
-	“Do I truly have a choice?”
-- “Fine,” he looks in his papers, “So, what was the initial reason of the operation?” # CLASS: interrogator
-* [Emergency call]
-	“There was this phone call to the emergency service. A woman told stories about this place in rural woods.
-* [Missing person reports]
-	“There were numerous missing person reports in this area. The local authorities gathered all their finest and invited the federal forces to crack the case. Eventually they have found this woman who told them stories about the place in rural woods.
-- <> Some suicide cult or something. She told that there were several dozens of people forcibly kept there: men, women, young, old, children. Told that she has escaped the village before ‘The last day has come’.”
-“What was the plan of action? Was it of local or federal authorities?” # CLASS: interrogator
-* [Local]
-	“It was a local initiative. They didn’t wait for topmost federal brass and acted themselves. The planning wasn’t that bad actually, people had experience.
-* [Federal]
-	“Federal, of course. Those wolves would allow no one near their prey once they’ve latched on to it. They’ve planned it all by themselves.
-- <> Two our groups had to fly heli to the neighbouring wheat-fields forty or so kilometers off the place. Then we had to cover the distance on foot to arrive the village in quiet. And then act according to the situation on the ground.”
-“What was the size of those groups?” # CLASS: interrogator
+* [{lang ? eng:Everything in my report|Всё есть в моём отчёте}]
+	{lang ? eng:
+		- “I have nothing to add. You can read everything in my report.”
+		- «Мне нечего добавить к тому, что я написал в своём отчёте».
+	}
+* [{lang ? eng:Circumstances were unusual, indeed|Это были те ещё обстоятельства}]
+	{lang ? eng:
+		- “If you have read my report, you already know it was a hell of circumstances, indeed.”
+		- «Если вы читали мой отчёт, то уже знаете, что это были чертовски необычные обстоятельства».
+	}
+- {lang ? eng:
+	- “Right. That is exactly why I am here. I would like to ask you several questions regarding your report. Maybe you will remember some extra details or would look on things in different perspective, like that.” # CLASS: interrogator
+	- «Верно. Я здесь как раз из-за него. Мне бы хотелось задать вам несколько вопросов относительно вашего отчёта. Возможно, вам удастся вспомнить какие-то новые детали или взглянуть на события с другой стороны». # CLASS: interrogator
+}
+- * [{lang ? eng:Shrug|Пожать плечами}]
+	{lang ? eng:
+		- I just shrug.
+		- Я лишь пожимаю плечами.
+	}
+  * [{lang ? eng:Do I have a choice?|А у меня есть выбор?}]
+	{lang ? eng:
+		- “Do I truly have a choice?”
+		- «А разве у меня есть выбор?»
+	}
+- {lang ? eng:
+	- “Fine,” he looks in his papers, “So, what was the initial reason of the operation?” # CLASS: interrogator
+	- «Хорошо, тогда начнём, — он проверяет свои бумаги. — Что послужило основанием для начала операции?» # CLASS: interrogator
+}
+* [{lang ? eng:Emergency call|Звонок в службу спасения}]
+	{lang ? eng:
+		- “There was this phone call to the emergency service. A woman told stories about this place in rural woods.
+		- «Был звонок в службу спасения. Какая-то женщина
+	}
+* [{lang ? eng:Missing person reports|Заявления о пропавших людях}]
+	{lang ? eng:
+		- “There were numerous missing person reports in this area. The local authorities gathered all their finest and invited the federal forces to crack the case. Eventually they have found this woman who told them stories about the place in rural woods.
+		- «В регионе участились случаи исчезновения людей. Местные власти собрали оперативную группу из своих лучших сотрудников и пригласили специалистов из центра. В конце концов, расследование привело их к женщине, которая
+	}
+- {lang ? eng:
+	- <> Some suicide cult or something. She told that there were several dozens of people forcibly kept there: men, women, young, old, children. Told that she has escaped the village before ‘The last day has come’.”
+	“What was the plan of action? Was it of local or federal authorities?” # CLASS: interrogator
+	- <> рассказала об одной деревне в глухих лесах. Секта самоубийц, что ли. Она рассказала, что там насильно удерживают множество народу: мужчин, женщин, молодых, старых, детей. Рассказала, что вовремя сбежала из деревни, до того как „Пришёл последний день“».
+	«Каков был план операции? Кто его составлял: местные власти или федеральные?» # CLASS: interrogator
+}
+* [{lang ? eng:Local|Местные}]
+	{lang ? eng:
+		- “It was a local initiative. They didn’t wait for topmost federal brass and acted themselves. The planning wasn’t that bad actually, people had experience.
+		- «Это была инициатива местных. Они не стали дожидаться федеральных шишек и всё спланировали сами. Впрочем, план был неплох, люди знали своё дело.
+	}
+* [{lang ? eng:Federal|Федералы}]
+	{lang ? eng:
+		- “Federal, of course. Those wolves would allow no one near their prey once they’ve latched on to it. They’ve planned it all by themselves.
+		- «Федералы, конечно. Эти волки ни за что не упустят свою добычу, если нападают на её след. Запланировали всё сами.
+	}
+- {lang ? eng:
+	- <> Two our groups had to fly heli to the neighbouring wheat-fields forty or so kilometers off the place. Then we had to cover the distance on foot to arrive the village in quiet. And then act according to the situation on the ground.”
+	“What was the size of those groups?” # CLASS: interrogator
+	- <> Вертушка должна была высадить две группы в полях километров за сорок до точки. Затем мы должны были скрытно подойти к деревне и действовать сообразно ситуации на месте».
+	«Какова была численность в группах?» # CLASS: interrogator
+}
 - (groups_sizes)
-* [Major group…]
-	“Major group was six men strong. The commander of the operation lead them.”
+* [{lang ? eng:Major group…|Основная группа…}]
+	{lang ? eng:
+		- “Major group was six men strong. The commander of the operation lead them.”
+		- «В основную группу входило шесть человек. Её возглавлял командир операции».
+	}
 	-> groups_sizes
-* [My group…]
-	“The group I was leading comprised five men: three operators, the radioman, and me. We were auxiliary to the major group.”
+* [{lang ? eng:My group…|Моя группа…}]
+	{lang ? eng:
+		- “The group I was leading comprised five men: three operators, the radioman, and me. We were auxiliary to the major group.”
+		- «В группу, которую я вёл, входили: три оператора, радист и я. Мы выступали приданными к основной группе».
+	}
 	-> groups_sizes
 * ->
-- “At what time did you arrived in the fields? How long did it take to approach the village?” # CLASS: interrogator
-* (start_morning) [Morning]
+- {lang ? eng:
+	- “At what time did you arrived in the fields? How long did it take to approach the village?” # CLASS: interrogator
+	- «В какое время вы высадились в полях? Как долго шли к деревне?» # CLASS: interrogator
+}
+* (start_morning) [{lang ? eng:Morning|Утром}]
 	//-> lz_time // DELETEME
-	“At ten o’clock in the morning, as planned.
-* (start_noon) [Noon]
+	{lang ? eng:
+		- “At ten o’clock in the morning, as planned.
+		- «В десять часов утра, как и было запланировано.
+	}
+* (start_noon) [{lang ? eng:Noon|В середине дня}]
 	//-> lz_time // DELETEME
-	“There was a problem with the engines on our fly, so we didn’t hit the road till midday. And we have arrived in the fields around two o’clock in the afternoon, several hours later than planned.
-- <>  We’ve descended on the closest available spot, then went through the woods as quiet as hunting rangers. After four hours we’ve reached our destination.”
-“Have you succeeded in your ambush?” # CLASS: interrogator
+	{lang ? eng:
+		- “There was a problem with the engines on our fly, so we didn’t hit the road till midday. And we have arrived in the fields around two o’clock in the afternoon, several hours later than planned.
+		- «С вертушкой были проблемы, поэтому мы вылетели только в середине дня. И над полями оказались уже к двум часам пополудни, на несколько часов позже, чем планировали.
+	}
+- {lang ? eng:
+	- <> We’ve descended on the closest available spot, then went through the woods as quiet as hunting rangers. After four hours we’ve reached our destination.”
+	“Have you succeeded in your ambush?” # CLASS: interrogator
+	- <> Мы высадились на ближайшем свободном участке, затем пошли через лес, тихо как охотники. Через четыре часа уже добрались до точки».
+	«Фактор внезапности помог вам?» # CLASS: interrogator
+}
 - (ambush)
-* [You’re perfectly aware what was there]
-	“You’ve read my report. What is the purpose in such a question? You’re perfectly aware what was there.”
-	“Yes, indeed. But as I said, it is crucial for you to recall every detail. So?” # CLASS: interrogator
+* [{lang ? eng:You’re perfectly aware what was there|Вы прекрасно знаете, что случилось}]
+	{lang ? eng:
+		- “You’ve read my report. What is the purpose in such a question? You’re perfectly aware what was there.”
+		“Yes, indeed. But as I said, it is crucial for you to recall every detail. So?” # CLASS: interrogator
+		- «Вы же читали мой отчёт. В чём смысл этого вопроса? Вы же прекрасно знаете, что там было».
+		«Да, конечно. Но как я и сказал ранее, крайне важно, чтобы вы вспомнили каждую деталь. Итак?» # CLASS: interrogator
+	}
 	-> ambush
-* [There wasn’t need in an ambush]
-	“There wasn’t need in an ambush. When we’ve approached the site, every inhabitant of the village was already dead. They’ve gathered in the middle space and cut each other’s throats. They were still stiff when we've found them—we were mere hours late.”
-- “We’ll be back on this topic in a moment. For now, would you describe the village, please? How many houses there were, their condition, etc.” # CLASS: interrogator
+* [{lang ? eng:There wasn’t need in an ambush|В скрытности не было необходимости}]
+	{lang ? eng:
+		- “There wasn’t need in an ambush. When we’ve approached the site, every inhabitant of the village was already dead. They’ve gathered in the middle space and cut each other’s throats. They were still stiff when we've found them—we were mere hours late.”
+		- «Не было необходимости нам таиться. Когда мы вышли к поселению, все жители деревни уже были мертвы. Собрались в центре и порезали друг другу глотки. Когда мы их нашли, ещё даже окоченение не прошло — опоздали лишь на несколько часов».
+	}
+- {lang ? eng:
+	- “We’ll be back on this topic in a moment. For now, would you describe the village, please? How many houses there were, their condition, etc.” # CLASS: interrogator
+	- «К этой теме мы сейчас вернёмся. А пока опишите, пожалуйста, деревню: сколько там было домов, их состояние и прочее». # CLASS: interrogator
+}
 - (houses)
-* [Number…]
-	“Only a dozen houses around an open area in the middle. And wooden idols everywhere.”
+* [{lang ? eng:Number…|Сколько…}]
+	{lang ? eng:
+		- “Only a dozen houses around an open area in the middle. And wooden idols everywhere.”
+		- «Не больше дюжины домов вокруг капища в центре. Ну, и истуканы повсюду».
+	}
 	-> houses
-* [Condition…]
-	“They were just some crippled shacks built off anything gathered in the woods. But one building was bigger and sturdier than the others—I think some kind of common warehouse or something.”
+* [{lang ? eng:Condition…|Состояние…}]
+	{lang ? eng:
+		- “They were just some crippled shacks built off anything gathered in the woods. But one building was bigger and sturdier than the others—I think some kind of common warehouse or something.”
+		- «Просто халупы из всякой лесной трухлятины. Правда, одно здание побольше и понадёжнее остальных — думаю, что-то вроде общего склада».
+	}
 	-> houses
 * ->
-- “Could you elaborate on this middle area? What it was like?” # CLASS: interrogator
-* [Common space]
-	“It looked like common space for inhabitants. Like for gatherings, praying, dancing maybe, killing each other.
-* [Center of the village]
-	“Just the center of the village. Where they gathered to pray, dance maybe, kill each other.
-- <> The spot was surrounded by idols.”
-- “And the idols? What they were like? Were they numerous?” # CLASS: interrogator
+- {lang ? eng:
+	- “Could you elaborate on this middle area? What it was like?” # CLASS: interrogator
+	- «Можете описать площадку в центре? На что она была похожа?» # CLASS: interrogator
+}
+* [{lang ? eng:Common space|Соборное место}]
+	{lang ? eng:
+		- “It looked like common space for inhabitants. Like for gatherings, praying, dancing maybe, killing each other.
+		- «Выглядело, как место, где они собирались. Не знаю, чтобы праздновать, молиться, танцевать там, убивать друг дружку.
+	}
+* [{lang ? eng:Center of the village|Центр деревни}]
+	{lang ? eng:
+		- “Just the center of the village. Where they gathered to pray, dance maybe, kill each other.
+		- «Просто центр деревни. Где они собирались, чтобы молиться, танцевать наверное, убивать друг дружку.
+	}
+- {lang ? eng:
+	- <> The spot was surrounded by idols.”
+	- <> Вокруг площадки стояли истуканы».
+}
+- {lang ? eng:
+	- “And the idols? What they were like? Were they numerous?” # CLASS: interrogator
+	- «А истуканы? Как они выглядели? Много ли их было?» # CLASS: interrogator
+}
 - (idols)
-* [Description…]
-	“They were like straight out of the fairy tales: some tree trunks cleaned of bark, old and grey. With various ugly faces cut on them.”
+* [{lang ? eng:Description…|Описание…}]
+	{lang ? eng:
+		- “They were like straight out of the fairy tales: some tree trunks cleaned of bark, old and grey. With various ugly faces cut on them.”
+		- «Да прям как из сказок: со стволов деревьев счистили кору и навырезали всяких рож. Старые, серые».
+	}
 	-> idols
-* [Amount…]
-	“They were everywhere. You couldn’t stand at any spot in the village out of their sight. Like they were watching. And a lot of them stood in the ring around the middle area.”
+* [{lang ? eng:Amount…|Количество…}]
+	{lang ? eng:
+		- “They were everywhere. You couldn’t stand at any spot in the village out of their sight. Like they were watching. And a lot of them stood in the ring around the middle area.”
+		- «Торчали повсюду. Из любого места деревни хоть одного, да увидишь. Как будто охраняют. И особенно вокруг центральной площадки, там прям стеной стояли».
+	}
 	-> idols
 * ->
-“Ok. Returning to the villagers. Where did you find them? What was the state of the bodies? How many of them were there?” # CLASS: interrogator
+- {lang ? eng:
+	- “Ok. Returning to the villagers. Where did you find them? What was the state of the bodies? How many of them were there?” # CLASS: interrogator
+	- «Принято. Возвращаясь к жителям. Где вы их нашли? В каком состоянии были тела? Как много?» # CLASS: interrogator
+}
 - (bodies)
-* [Where…]
-	“As I said, all the inhabitants have gathered in the middle space and conducted some kind of suicide ritual. All of them—even children—held these wooden knives which they used to cut their own throats. Moreover, it looked like they ‘helped’ to those who couldn’t do it themselves. Blood was everywhere.”
+* [{lang ? eng:Where…|Где…}]
+	{lang ? eng:
+		- “As I said, all the inhabitants have gathered in the middle space and conducted some kind of suicide ritual. All of them—even children—held these wooden knives which they used to cut their own throats. Moreover, it looked like they ‘helped’ to those who couldn’t do it themselves. Blood was everywhere.”
+		- «Как уже говорил, все собрались на центральном капище и провели некий самоубийственный ритуал. У всех — даже детей — в руках такие деревянные ножички, которыми себе горло и резали. Видимо, „помогали“ тем, кто сам не справился. Крови — по колено».
+	}
 	-> bodies
-* [How many…]
-	“Exactly thirty eight corpses heaped in the spot.”
-	“Did you checked the surroundings? No bodies in other places?” # CLASS: interrogator
-	** [Of course]
-		“Of course we did. There were corpses of animals around—I think, they were slaughtered beforehand and weren’t the part of the ritual—but no more people.”
+* [{lang ? eng:How many…|Сколько…}]
+	{lang ? eng:
+		- “Exactly thirty eight corpses heaped in the spot.”
+		“Did you checked the surroundings? No bodies in other places?” # CLASS: interrogator
+		- «Ровно тридцать восемь тел вповалку».
+		«Вы проверили окрестности? Тел больше нигде не находили?» # CLASS: interrogator
+	}
+	** [{lang ? eng:Of course|Конечно}]
+		{lang ? eng:
+			- “Of course we did. There were corpses of animals around—I think, they were slaughtered beforehand and weren’t the part of the ritual—but no more people.”
+			- «Конечно, проверили. Нашли трупы животных — их, думаю, резали загодя, до ритуала — но никого из людей».
+		}
 	-> bodies
 * ->
-- “What was the next step after finding the bodies?” # CLASS: interrogator
+- {lang ? eng:
+	- “What was the next step after finding the bodies?” # CLASS: interrogator
+	- «После обнаружения тел, какие были дальнейшие действия?» # CLASS: interrogator
+}
 * [We had to secure the area]
 	“We had to secure the village, first. We’ve checked all the buildings in and out, scanned the surrounding forests with the heat-seeking equipment. There were nobody and nothing.”
 	** [Then we had to inform the HQ]

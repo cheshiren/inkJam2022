@@ -19,7 +19,7 @@
 		"scope": "ink",
 		"prefix": "enc",
 		"body": [
-			"{lang ? rus:$TM_SELECTED_TEXT|$1}"
+			"{lang ? eng:$TM_SELECTED_TEXT|$1}"
 		],
 		"description": "Add English text for choice"
 	},
@@ -27,7 +27,7 @@
 		"scope": "ink",
 		"prefix": "ent",
 		"body": [
-			"{lang ? rus:",
+			"{lang ? eng:",
 			"    - $TM_SELECTED_TEXT",
 			"    - $1",
 			"}"
