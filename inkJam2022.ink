@@ -86,7 +86,7 @@ VAR Attack_was_reported = false
 - <> {lang ? eng:
 	- Some suicide cult or something. She told that there were several dozens of people forcibly kept there: men, women, young, old, children. Told that she has escaped the village before ‘The last day has come’.”
 	“What was the plan of action? Was it of local or federal authorities?” # CLASS: interrogator
-	- рассказала об одной деревне в глухих лесах. Секта самоубийц, что ли. Она рассказала, что там насильно удерживают множество народу: мужчин, женщин, молодых, старых, детей. Рассказала, что вовремя сбежала из деревни, до того как „Пришёл последний день“».
+	- рассказала об одной деревне в глухих лесах. Секта самоубийц, что ли. Она рассказала, что там насильно удерживают множество народу: мужчин, женщин, молодых, старых, детей. Рассказала, что вовремя сбежала из деревни, до того как „Последний день настал“».
 	«Каков был план операции? Кто его составлял: местные власти или федеральные?» # CLASS: interrogator
 }
 * [{lang ? eng:Local|Местные}]
@@ -102,7 +102,7 @@ VAR Attack_was_reported = false
 - <> {lang ? eng:
 	- Two our groups had to fly heli to the neighbouring wheat-fields forty or so kilometers off the place. Then we had to cover the distance on foot to arrive the village in quiet. And then act according to the situation on the ground.”
 	“What was the size of those groups?” # CLASS: interrogator
-	- Вертушка должна была высадить две группы в полях километров за сорок до точки. Затем мы должны были скрытно подойти к деревне и действовать сообразно ситуации на месте».
+	- Вертушка должна была высадить наши две группы в поле километров за сорок до точки. Затем мы должны были скрытно подойти к деревне и действовать сообразно ситуации на месте».
 	«Какова была численность в группах?» # CLASS: interrogator
 }
 - (groups_sizes)
@@ -115,7 +115,7 @@ VAR Attack_was_reported = false
 * [{lang ? eng:My group…|Моя группа…}]
 	{lang ? eng:
 		- “The group I was leading comprised five men: three operators, the radioman, and me. We were auxiliary to the major group.”
-		- «В группу, которую я вёл, входили: три оператора, радист и я. Мы выступали приданными к основной группе».
+		- «В группу, которую я вёл, входили: три стрелка, радист и я. Мы выступали приданными к основной группе».
 	}
 	-> groups_sizes
 * ->
@@ -205,7 +205,7 @@ VAR Attack_was_reported = false
 * [{lang ? eng:Amount…|Количество…}]
 	{lang ? eng:
 		- “They were everywhere. You couldn’t stand at any spot in the village out of their sight. Like they were watching. And a lot of them stood in the ring around the middle area.”
-		- «Торчали повсюду. Из любого места деревни хоть одного, да увидишь. Как будто охраняют. И особенно вокруг центральной площадки, там прям стеной стояли».
+		- «Торчали повсюду. Из любого места деревни хоть одного, да увидишь. Как будто охраняют. И особенно много стояло вокруг центральной площадки».
 	}
 	-> idols
 * ->
@@ -293,7 +293,7 @@ VAR Attack_was_reported = false
 * (radioman_injured) [{lang ? eng:It had to be my group|Сперва должна была остаться моя группа}]
 	{lang ? eng:
 		- “It had to be my group at first. But my radioman injured his arm checking the idols—I don’t know exactly how he did it—so we had to exchange directives.
-		- «Сперва должна была остаться моя группа. Но мой радист повредил руку, когда проверял истуканов — даже не знаю, как он умудрился — поэтому пришлось изменить планы.
+		- «Сперва должна была остаться моя группа. Но мой радист повредил руку, когда проверял истуканов — даже не знаю, как он умудрился — поэтому пришлось поменять задачи.
 	}
 * [{lang ? eng:Commander’s group|Группа командира}]
 	{lang ? eng:
@@ -332,11 +332,11 @@ VAR Attack_was_reported = false
 	}
 - <> {lang ? eng:
 	- Then we radioed to commander and HQ about our arrival and waited for the helis.”
-	- Потом мы по рации отчитались командиру и руководству о том, что дошли до места, и стали ждать вертушку».
+	- Потом по рации отчитались командиру и руководству, что дошли до места и ждём вертушку».
 }
 - {lang ? eng:
 	- “How long did you have to wait and what did you do in the meantime?” # CLASS: interrogator
-	- «Как долго пришлось ждать? Что делали, пока ждали?»
+	- «Как долго пришлось ждать? Что делали, пока ждали?» # CLASS: interrogator
 }
 - (lz_time)
 * [{lang ? eng:How long…|Как долго…}]
@@ -414,7 +414,7 @@ VAR Attack_was_reported = false
 		~ Attack_was_reported = true
 		{lang ? eng:
 			- “{radioman_injured:Yes, I’ve instructed radioman to report to HQ|Yes, we’ve reported} that the group in the village needed our help and we were going back. But without details on any of this voodoo crap.”
-			- «{radioman_injured:Да, я приказал радисту доложить в штаб|Да, мы доложили}, что группе в деревни нужна помощь и что мы спускаемся обратно. Но без упоминания всей этой вуду-чуши».
+			- «{radioman_injured:Да, я приказал радисту доложиться в штаб|Да, мы доложили}, что группе в деревни нужна помощь и что мы спускаемся обратно. Но без упоминания всей этой вуду-чуши».
 		}
 	** [{lang ? eng:No|Нет}]
 		{lang ? eng:
@@ -554,12 +554,12 @@ VAR Attack_was_reported = false
 * [{lang ? eng:Yes|Да}]
 	{lang ? eng:
 		- “Well, yes. In times, when you have to fight back waves after waves of undead, you might wander, how the hell did you end up in such a situation. I asked my commander to enlighten me.”
-		- «Ну, да. Видите ли, во то время, когда приходится отбиваться от волн нежити, нет-нет, да и возникнет мысль: как же я оказался в такой заднице? Я попросил командира просветить меня».
+		- «Ну, да. Видите ли, в то время, когда приходится отбиваться от волн нежити, нет-нет, да и возникнет мысль: как же я оказался в такой заднице? Я попросил командира просветить меня».
 	}
 * [{lang ? eng:No|Нет}]
 	{lang ? eng:
 		- “Well, not exactly. You see, in times, when you have to fight back waves after waves of undead, there might be no time to wander, how the hell did you end up in such a situation. My commander enlightened me on his own.”
-		- «Ну, не совсем. Видите ли, во то время, когда приходится отбиваться от волн нежити, некогда задаваться вопросом: как же я оказался в такой заднице? Командир сам решил просветить меня».
+		- «Ну, не совсем. Видите ли, в то время, когда приходится отбиваться от волн нежити, некогда задаваться вопросом: как же я оказался в такой заднице? Командир сам решил просветить меня».
 	}
 - (idols_song) {lang ? eng:
 	- “What did he say?” # CLASS: interrogator
@@ -568,7 +568,7 @@ VAR Attack_was_reported = false
 * [{lang ? eng:Idols were singing|Истуканы пели}]
 	{lang ? eng:
 		- “He said, that around midnight they heard some strange noise all over the village. A whining. By the time they realised it were idols singing, the villagers have crawled out their sacrifice pit, and slaughtered one of ours.”
-		- «Он рассказал, что где-то около полуночи они услышали странный шум по всей деревне. Какой-то скулёж. К тому времени, как они поняли, что это так пели истуканы, жители повылазили из своей жертвенной ямы и уже разорвали одного из наших».
+		- «Он рассказал, что где-то около полуночи они услышали странный звук по всей деревне. Как будто кто-то скулил. К тому времени, как они поняли, что это пели истуканы, жители повылазили из своей жертвенной ямы и уже разорвали одного из наших».
 	}
 - {lang ? eng:
 	- “The idols were singing? Is that what he said?” # CLASS: interrogator
@@ -582,11 +582,11 @@ VAR Attack_was_reported = false
 * [{lang ? eng:I tell you what I was told|За что купил, за то и продаю}]
 	{lang ? eng:
 		- “{name:Look, Darius, }I tell you what I was told, ok?
-		- «{name:Слушай, Дарий, я з|З}а что купил, за то и продаю, понятно?
+		- «{name:Слушайте, Дарий, я з|З}а что купил, за то и продаю, понятно?
 	}
 - <> {lang ? eng:
 	- Yes, he said that the idols sang first and then all hell broke loose. When they’ve managed to barricade themselves inside the warehouse, they’ve lost three men.”
-	- Да, он сказал, что сначала начали петь истуканы и уже потом разверзся ад. Когда они, наконец, смогли забаррикадироваться на складе, они уже потеряли троих».
+	- Да, он сказал, что сначала начали петь истуканы и уже потом разверзся ад. Когда они, наконец, смогли забаррикадироваться на складе, уже потеряли троих».
 }
 - {lang ? eng:
 	- “Ok, that’s clear. Next to the resolution—how did you find out the way idols influenced the attackers?” # CLASS: interrogator
@@ -608,7 +608,7 @@ VAR Attack_was_reported = false
 }
 - {lang ? eng:
 	- “And what next? You just destroyed all the idols?” # CLASS: interrogator
-	- «Что было дальше? Вы просто расстреляли все истуканы?» # CLASS: interrogator
+	- «Что было дальше? Вы просто расстреляли всех истуканов?» # CLASS: interrogator
 }
 * [{lang ? eng:That wasn’t that easy|Это было не так просто}]
 	{lang ? eng:
